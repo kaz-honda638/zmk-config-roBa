@@ -87,10 +87,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME                      &kp HOME  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp DELETE
-&kp TAB     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END   &trans      &trans  &kp END   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp INSERT
-&trans      &trans          &trans          &trans           &trans    &trans      &trans  &trans    &trans          &trans          &trans           &trans
-&trans      &trans          &trans          &trans           &trans    &trans      &trans  &trans                                                     &trans
+&kp ESCAPE          &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME                      &kp HOME  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp DELETE
+&mt LEFT_SHIFT TAB  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END   &trans      &trans  &kp END   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &mt RIGHT_SHIFT INSERT
+&trans              &trans          &trans          &trans           &trans    &trans      &trans  &trans    &trans          &trans          &trans           &trans
+&trans              &trans          &trans          &trans           &trans    &trans      &trans  &trans                                                     &trans
             >;
         };
     };
