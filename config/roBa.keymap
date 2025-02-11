@@ -1,7 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #define MOUSE 4
 #define SCROLL 5
@@ -67,21 +66,19 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W           &kp E           &kp R      &kp T                                   &kp Y  &kp U  &kp I                &kp O              &kp P
-&mt LEFT_SHIFT A  &kp S           &kp D           &kp F      &kp G  &kp ESCAPE        &kp BACKSPACE  &kp H  &kp J  &kp K                &kp L              &mt RIGHT_SHIFT SEMI
-&mt LCTRL Z       &mt LEFT_GUI X  &mt LEFT_ALT C  &kp V      &kp B  &kp CAPSLOCK      &kp ENTER      &kp N  &kp M  &mt RIGHT_ALT COMMA  &mt RIGHT_GUI DOT  &mt RCTRL SLASH
-&msc SCRL_UP      &msc SCRL_DOWN  &kp LG(X)       &kp SPACE  &mo 2  &mkp LCLK         &mkp RCLK      &mo 1                                                 &kp MINUS
+&kp Q             &kp W           &kp E           &kp R      &kp T                            &kp Y  &kp U  &kp I                &kp O              &kp P
+&mt LEFT_SHIFT A  &kp S           &kp D           &kp F      &kp G  &kp LC(Z)      &kp MINUS  &kp H  &kp J  &kp K                &kp L              &mt RIGHT_SHIFT SEMI
+&mt LCTRL Z       &mt LEFT_GUI X  &mt LEFT_ALT C  &kp V      &kp B  &kp LC(Y)      &kp EQUAL  &kp N  &kp M  &mt RIGHT_ALT COMMA  &mt RIGHT_GUI DOT  &mt RCTRL SLASH
+&kp LC(C)         &kp LC(X)       &kp LC(X)       &kp SPACE  &mo 2  &mkp LCLK      &mkp RCLK  &mo 1                                                 &kp RG(X)
             >;
-
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         FUNC-NUM {
             bindings = <
-&kp F1             &kp F2  &kp F3  &kp F4    &kp F5                         &kp F6    &kp F7    &kp F8  &kp F9  &kp F10
-&mt LEFT_SHIFT N1  &kp N2  &kp N3  &kp N4    &kp N5     &trans      &trans  &kp N6    &kp N7    &kp N8  &kp N9  &mt RIGHT_SHIFT N0
-&trans             &trans  &trans  &kp APOS  &kp EQUAL  &trans      &trans  &kp LBKT  &kp RBKT  &trans  &trans  &trans
-&trans             &trans  &trans  &trans    &trans     &trans      &trans  &trans                              &trans
+&kp F1             &kp F2  &kp F3  &kp F4    &kp F5                             &kp F6    &kp F7    &kp F8  &kp F9  &kp F10
+&mt LEFT_SHIFT N1  &kp N2  &kp N3  &kp N4    &kp N5         &trans      &trans  &kp N6    &kp N7    &kp N8  &kp N9  &mt RIGHT_SHIFT N0
+&trans             &trans  &trans  &kp APOS  &kp BACKSLASH  &trans      &trans  &kp LBKT  &kp RBKT  &trans  &trans  &trans
+&trans             &trans  &trans  &trans    &trans         &trans      &trans  &trans                              &trans
             >;
         };
 
