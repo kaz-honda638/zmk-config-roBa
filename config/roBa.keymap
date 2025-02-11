@@ -71,6 +71,8 @@
 &mt LCTRL Z       &mt LEFT_GUI X  &mt LEFT_ALT C  &kp V      &kp B  &kp LC(Z)      &kp EQUAL  &kp N  &kp M  &mt RIGHT_ALT COMMA  &mt RIGHT_GUI DOT  &mt RCTRL SLASH
 &kp LC(C)         &kp LC(X)       &kp LC(V)       &kp SPACE  &mo 2  &mkp LCLK      &mkp RCLK  &mo 1                                                 &kp RG(X)
             >;
+
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         FUNC-NUM {
