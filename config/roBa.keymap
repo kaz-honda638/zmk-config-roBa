@@ -20,8 +20,8 @@
             key-positions = <11 10>;
         };
 
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
+        Enter {
+            bindings = <&kp ENTER>;
             key-positions = <20 21>;
         };
 
@@ -38,11 +38,6 @@
         Caps {
             bindings = <&kp CAPS>;
             key-positions = <22 23>;
-        };
-
-        Enter {
-            bindings = <&kp ENTER>;
-            key-positions = <32 33>;
         };
     };
 
