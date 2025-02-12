@@ -20,8 +20,8 @@
             key-positions = <11 10>;
         };
 
-        Enter {
-            bindings = <&kp ENTER>;
+        Ins {
+            bindings = <&kp INS>;
             key-positions = <20 21>;
         };
 
@@ -30,8 +30,8 @@
             key-positions = <0 1>;
         };
 
-        Back {
-            bindings = <&kp BACKSPACE>;
+        Del {
+            bindings = <&kp DEL>;
             key-positions = <8 9>;
         };
 
@@ -86,8 +86,8 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE          &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME                      &kp HOME  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp DELETE
-&mt LEFT_SHIFT TAB  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END   &trans      &trans  &kp END   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &mt RIGHT_SHIFT INSERT
+&kp ESCAPE          &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME                      &kp HOME  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp BACKSPACE
+&mt LEFT_SHIFT TAB  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END   &trans      &trans  &kp END   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &mt RIGHT_SHIFT ENTER
 &trans              &trans          &trans          &trans           &trans    &trans      &trans  &trans    &trans          &trans          &trans           &trans
 &trans              &trans          &trans          &trans           &trans    &trans      &trans  &trans                                                     &trans
             >;
