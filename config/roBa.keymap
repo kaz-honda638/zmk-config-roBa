@@ -1,5 +1,4 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -53,25 +52,6 @@
             bindings = <&kp CAPS>;
             key-positions = <22 23>;
         };
-
-        bt_next {
-            bindings = <&bt BT_NXT>;
-            key-positions = <42 34>;
-        };
-
-        bt_prv {
-            bindings = <&bt BT_PRV>;
-            key-positions = <42 35>;
-        };
-    };
-
-    macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
-        };
     };
 
     behaviors {
@@ -90,19 +70,19 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W           &kp E           &kp R      &kp T                                 &kp Y  &kp U  &kp I                &kp O              &kp P
-&mt LEFT_SHIFT A  &kp S           &kp D           &kp F      &kp G  &kp MINUS      &msc SCRL_UP    &kp H  &kp J  &kp K                &kp L              &mt RIGHT_SHIFT SEMI
-&mt LCTRL Z       &mt LEFT_GUI X  &mt LEFT_ALT C  &kp V      &kp B  &kp EQUAL      &msc SCRL_DOWN  &kp N  &kp M  &mt RIGHT_ALT COMMA  &mt RIGHT_GUI DOT  &mt RCTRL SLASH
-&kp LC(C)         &kp LC(X)       &kp LC(V)       &kp SPACE  &mo 2  &mo 1          &mo 1           &mo 2                                                 &kp RG(X)
+&kp Q             &kp W           &kp E           &kp R      &kp T                                      &kp Y          &kp U  &kp I                &kp O              &kp P
+&mt LEFT_SHIFT A  &kp S           &kp D           &kp F      &kp G  &kp UNDERSCORE      &msc SCRL_UP    &kp H          &kp J  &kp K                &kp L              &mt RIGHT_SHIFT SEMI
+&mt LCTRL Z       &mt LEFT_GUI X  &mt LEFT_ALT C  &kp V      &kp B  &kp BACKSLASH       &msc SCRL_DOWN  &kp N          &kp M  &mt RIGHT_ALT COMMA  &mt RIGHT_GUI DOT  &mt RCTRL SLASH
+&kp LC(C)         &kp LC(X)       &kp LC(V)       &kp SPACE  &to 2  &to 1               &kp ENTER       &kp BACKSPACE                                                 &kp RG(X)
             >;
         };
 
         FUNC-NUM {
             bindings = <
-&kp F1             &kp F2  &kp F3  &kp F4    &kp F5                                     &kp F6    &kp F7    &kp F8  &kp F9  &kp F10
-&mt LEFT_SHIFT N1  &kp N2  &kp N3  &kp N4    &kp N5         &kp UNDERSCORE      &trans  &kp N6    &kp N7    &kp N8  &kp N9  &mt RIGHT_SHIFT N0
-&trans             &trans  &trans  &kp APOS  &kp BACKSLASH  &trans              &trans  &kp LBKT  &kp RBKT  &trans  &trans  &trans
-&trans             &trans  &trans  &trans    &trans         &trans              &trans  &trans                              &trans
+&kp F1             &kp F2  &kp F3  &kp F4    &kp F5                                &kp F6    &kp F7    &kp F8  &kp F9  &kp F10
+&mt LEFT_SHIFT N1  &kp N2  &kp N3  &kp N4    &kp N5         &kp MINUS      &trans  &kp N6    &kp N7    &kp N8  &kp N9  &mt RIGHT_SHIFT N0
+&trans             &trans  &trans  &kp APOS  &kp BACKSLASH  &kp EQUAL      &trans  &kp LBKT  &kp RBKT  &trans  &trans  &trans
+&trans             &trans  &trans  &trans    &trans         &to 0          &trans  &trans                              &trans
             >;
         };
 
@@ -111,7 +91,7 @@
 &kp ESCAPE          &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME                      &kp PSCRN  &kp PAUSE_BREAK  &kp INS    &kp DEL  &kp BACKSPACE
 &mt LEFT_SHIFT TAB  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END   &trans      &trans  &mkp MCLK  &mkp LCLK        &mkp RCLK  &trans   &mt RIGHT_SHIFT ENTER
 &trans              &trans          &trans          &trans           &trans    &trans      &trans  &trans     &trans           &trans     &trans   &trans
-&trans              &trans          &trans          &trans           &trans    &trans      &trans  &trans                                          &trans
+&trans              &trans          &trans          &trans           &to 0     &trans      &trans  &trans                                          &trans
             >;
         };
     };
