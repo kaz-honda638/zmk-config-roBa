@@ -70,28 +70,55 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W           &kp E           &kp R      &kp T                                      &kp Y          &kp U  &kp I                &kp O              &kp P
-&mt LEFT_SHIFT A  &kp S           &kp D           &kp F      &kp G  &kp UNDERSCORE      &msc SCRL_UP    &kp H          &kp J  &kp K                &kp L              &mt RIGHT_SHIFT SEMI
-&mt LCTRL Z       &mt LEFT_GUI X  &mt LEFT_ALT C  &kp V      &kp B  &kp BACKSLASH       &msc SCRL_DOWN  &kp N          &kp M  &mt RIGHT_ALT COMMA  &mt RIGHT_GUI DOT  &mt RCTRL SLASH
-&kp LC(C)         &kp LC(X)       &kp LC(V)       &kp SPACE  &to 2  &to 1               &kp ENTER       &kp BACKSPACE                                                 &kp RG(X)
+&kp Q             &kp W           &kp E           &kp R      &kp T                                              &kp Y        &kp U  &kp I                &kp O              &lt 5 P
+&mt LEFT_SHIFT A  &kp S           &kp D           &kp F      &kp G         &kp UNDERSCORE      &msc SCRL_UP     &kp H        &kp J  &kp K                &kp L              &mt RIGHT_SHIFT SEMI
+&mt LCTRL Z       &mt LEFT_GUI X  &mt LEFT_ALT C  &kp V      &kp B         &kp BACKSLASH       &msc SCRL_DOWN   &kp N        &kp M  &mt RIGHT_ALT COMMA  &mt RIGHT_GUI DOT  &mt RCTRL SLASH
+&kp LC(C)         &kp LC(X)       &kp LC(V)       &kp SPACE  &lt 3 DELETE  &lt 4 CAPSLOCK      &lt 2 BACKSPACE  &lt 1 ENTER                                                 &kp BACKSLASH
             >;
         };
 
-        FUNC-NUM {
+        NUM-LEFT {
             bindings = <
-&kp F1             &kp F2  &kp F3  &kp F4    &kp F5                                &kp F6    &kp F7    &kp F8  &kp F9  &kp F10
-&mt LEFT_SHIFT N1  &kp N2  &kp N3  &kp N4    &kp N5         &kp MINUS      &trans  &kp N6    &kp N7    &kp N8  &kp N9  &mt RIGHT_SHIFT N0
-&trans             &trans  &trans  &kp APOS  &kp BACKSLASH  &kp EQUAL      &trans  &kp LBKT  &kp RBKT  &trans  &trans  &trans
-&trans             &trans  &trans  &trans    &trans         &to 0          &trans  &trans                              &trans
+&kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp HOME                         &trans  &trans  &trans  &trans  &trans
+&kp TAB  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp END   &kp MINUS      &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans    &kp EQUAL      &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans        &trans        &trans        &trans    &trans         &trans  &trans                          &trans
             >;
         };
 
-        ARROW {
+        FUNC-LEFT {
+            bindings = <
+&kp ESCAPE  &kp F1  &kp F2  &kp F3  &kp HOME                         &trans  &trans  &trans  &trans  &trans
+&kp TAB     &kp F4  &kp F5  &kp F6  &kp END   &kp MINUS      &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &kp F7  &kp F8  &kp F9  &trans    &kp EQUAL      &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &trans  &trans  &trans    &trans         &trans  &trans                          &trans
+            >;
+        };
+
+        ARROW_RIGHT {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &kp PAGE_UP    &kp HOME        &kp UP_ARROW    &kp END          &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans         &trans          &trans          &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                          &trans
+            >;
+        };
+
+        layer_4 {
             bindings = <
 &kp ESCAPE          &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME                      &kp PSCRN  &kp PAUSE_BREAK  &kp INS    &kp DEL  &kp BACKSPACE
 &mt LEFT_SHIFT TAB  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END   &trans      &trans  &mkp MCLK  &mkp LCLK        &mkp RCLK  &trans   &mt RIGHT_SHIFT ENTER
 &trans              &trans          &trans          &trans           &trans    &trans      &trans  &trans     &trans           &trans     &trans   &trans
-&trans              &trans          &trans          &trans           &to 0     &trans      &trans  &trans                                          &trans
+&trans              &trans          &trans          &trans           &trans    &trans      &trans  &trans                                          &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MCLK  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
     };
